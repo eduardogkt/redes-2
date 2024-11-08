@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+    width: 650px;
+    background-color: whitesmoke;
+}
+
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+header h2 {
+    font-size: 1.1rem;
+}
+
+main {
+    margin: 2rem 0;
+}
+
+h1 {
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
