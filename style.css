@@ -3,40 +3,56 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #333333;
 }
 
 html {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body {
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
     width: 650px;
     background-color: whitesmoke;
 }
 
 header {
     text-align: center;
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 header h2 {
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
 main {
     margin: 2rem 0;
 }
 
+h1,
+h2 {
+    color: #282828;
+    font-weight: 500;
+}
+
 h1 {
-    margin-bottom: 0.8rem;
-    padding: 0.8rem 0.8rem 0 0.8rem;
-    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 1.3rem;
     margin-bottom: 0.3rem;
+    font-size: 20px;
+}
+
+a {
+    color: #337ab7;
+}
+
+span {
+    font-weight: 700;
+    line-height: 1.1;
 }
