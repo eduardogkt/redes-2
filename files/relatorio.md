@@ -12,3 +12,7 @@ Este trabalho tem como objetivo comparar o desempenho dos protocolos TCP e UDP. 
 ### Projeto
 
 ### Conclusões
+
+'''
+tempo, vazão, com/sem fragmentação e contagem de perda de pacotes UDP, com/sem checksum (tempo)
+'''
