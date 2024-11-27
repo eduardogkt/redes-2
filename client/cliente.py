@@ -9,6 +9,7 @@ def run_client():
     server_ip = socket.gethostbyname("h44")
     server_port = 8001
 
+
     # envia pedido de conexão para o cliente
     try:
         client.connect((server_ip, server_port))
@@ -16,57 +17,31 @@ def run_client():
     except socket.error as e:
         print(f"Failed to connect: {e}")
     
-    #calculate_time_tcp(client)
-    #time_tcp_ram(client)
-    #client.close()
+    recebe_arquivo(client, 'ex1.txt', 1024)
+    recebe_arquivo(client, 'ex2.txt', 60000)
 
-    while True:
-        # manda mensagem para o cliente
-        msg = input("Enter message: ")
-        client.send(msg.encode("utf-8")[:1024])
-
-        # recebe resposta do server
-        response = client.recv(1024)
-        response = response.decode("utf-8")
-
-        # se recebeu closed do server indica que server encerrou a conexão
-        if response.lower() == "closed":
-            break
-
-        print(f"Received: {response}")
+    client.close()
     
     # desaloca socket, encerrando conexão com o server
-   
 
-def calculate_time_tcp(client):
-    print("Mandando arquivo para TCP...")
-    f = open('19mb.txt','rb')
-
-
+def recebe_arquivo(client, arquivo, tam_pacote):
+    f = open(arquivo, 'wb')
+    print(f'Recebendo pacotes de tamanho {tam_pacote}')
+    data =  client.recv(tam_pacote)
+    print('recebeu')
     init_time = time.time()
-    data = f.read(1024)
-    while(data):
-        client.send(data)
-        data = f.read(60000)
-        
-    f.close()
-    message = b'finished'
-    client.send(message)
+    while True:
+        if (data < tam_pacote):
+            print('recebeu finished')
+            break
+        f.write(data)
+        print('parado')
+        data = client.recv(tam_pacote)
+        print(f'recebeu1 {data}')
+
     end_time = time.time()
-
-    print(f"Tempo de envio TCP: {end_time - init_time}")
-
-
-def time_tcp_ram(client):
-    data= b'a' * 1000000000
-    print("Mandando  para TCP em memoria principal...")
-    init_time = time.time()
-    chunk_size = 1024
-    for i in range(0, len(data), chunk_size):
-        client.send(data[i:i+chunk_size])
-    message = b'finished'
-    client.send(message)
-    end_time = time.time()  
-    print(f"Tempo de envio TCP: {end_time - init_time}")
-
+    f.close()
+    print('Acabou a transmissão')
+    print(f"Tempo de recebimento TCP de um arquivo: {end_time - init_time}")
+    
 run_client()
