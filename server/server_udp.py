@@ -19,13 +19,14 @@ def run_server(host):
         data = data.decode()
         msg = data.split()
         tam_pacote = int(msg[1])
-        info = msg[2]
+        nome_arquivo = msg[2]
+        num_bytes = int(msg[3])
         
         if msg[0] == "arquivo":
-            pacotes_enviados = mandando_arquivo(server, cliente_addr, tam_pacote, info)
+            pacotes_enviados = mandando_arquivo(server, cliente_addr, tam_pacote, nome_arquivo)
         else:
-            pacotes_enviados = mandando_memoria_principal(server, cliente_addr, tam_pacote, int(info))
-
+            pacotes_enviados = mandando_memoria_principal(server, cliente_addr, tam_pacote, int(num_bytes))
+        print(pacotes_enviados)
         data, cliente_addr = server.recvfrom(1024)
         pacotes_recebidos = int(data.decode())
         break
@@ -58,7 +59,8 @@ def mandando_arquivo(server, cliente_addr, tam_pacote, info):
     pacotes_enviados += 1
     end_time = time.time()
 
-    print(f"Tempo de envio do arquivo do servior UDP: {end_time - init_time}")
+    final_time = round(end_time - init_time, 5)
+    print(f"Tempo de envio do arquivo do servior TCP: {final_time} segundos")
 
     return pacotes_enviados
 
@@ -73,11 +75,12 @@ def mandando_memoria_principal(server, cliente_addr, tam_pacote, num_bytes):
         server.sendto(data[i:i+tam_pacote], cliente_addr)
         pacotes_enviados += 1
 
+    print("mandando EOF")
     server.sendto(b'EOF', cliente_addr)
     pacotes_enviados += 1
     end_time = time.time()
-
-    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {end_time - init_time}")
+    final_time = round(end_time - init_time, 5)
+    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {final_time}")
     return pacotes_enviados
 
 print("=============================================================================")
