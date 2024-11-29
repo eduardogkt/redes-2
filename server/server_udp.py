@@ -95,6 +95,6 @@ if len(sys.argv) < 2:
     print("Número de argumentos errados")
     sys.exit(1)
 host = sys.argv[1]                                # Host do servidor
-server_port =  sys.argv[2]                        # Porta do servidor        
+server_port = int(sys.argv[2])                    # Porta do servidor        
 
 run_server(host, server_port)

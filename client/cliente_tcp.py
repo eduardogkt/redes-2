@@ -68,6 +68,6 @@ tam_pacote = int(sys.argv[2])              # Tamanho do pacote a cada
 nome_arquivo = sys.argv[3].lower()         # Arquivo onde será escrito os dados
 num_bytes = int(sys.argv[4])               # Número de bytes que será transferido em memória
 host = sys.argv[5]                         # Nome do host do servidor
-server_port = sys.argv[6]                  # Porta do servidor
+server_port = int(sys.argv[6])             # Porta do servidor
 
 run_client(metrica, tam_pacote, nome_arquivo, num_bytes,host, server_port)
