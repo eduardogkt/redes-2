@@ -26,12 +26,13 @@ def run_server(host):
         data = data.decode()
         msg = data.split()
         tam_pacote = int(msg[1])
-        info = msg[2]
+        nome_arquivo = msg[2]
+        num_bytes = int(msg[3])
 
         if msg[0] == "arquivo":
-            mandando_arquivo(cliente, tam_pacote, info)
+            mandando_arquivo(cliente, tam_pacote, nome_arquivo)
         else:
-            mandando_memoria_principal(cliente, tam_pacote, int(info))
+            mandando_memoria_principal(cliente, tam_pacote, num_bytes)
         break
 
     # desaloca socket do cliente
@@ -40,10 +41,10 @@ def run_server(host):
     server.close()
     print("Transmissão finalizada")
 
-def mandando_arquivo(cliente, tam_pacote, info):
-    print(f"Mandando o arquivo {info} para cliente TCP")
+def mandando_arquivo(cliente, tam_pacote, nome_arquivo):
+    print(f"Mandando o arquivo {nome_arquivo} para cliente TCP")
     print(f"Mandando {tam_pacote} bytes por vez... ")
-    f = open(info,'rb')
+    f = open(nome_arquivo,'rb')
 
     init_time = time.time()
     data = f.read(tam_pacote)
@@ -53,8 +54,9 @@ def mandando_arquivo(cliente, tam_pacote, info):
         
     f.close()
     end_time = time.time()
+    final_time = round(end_time - init_time, 5)
 
-    print(f"Tempo de envio do arquivo do servior TCP: {end_time - init_time}")
+    print(f"Tempo de envio do arquivo do servior TCP: {final_time} segundos")
 
 
 def mandando_memoria_principal(cliente, tam_pacote, num_bytes):
@@ -66,8 +68,9 @@ def mandando_memoria_principal(cliente, tam_pacote, num_bytes):
     for i in range(0, len(data), tam_pacote):
         cliente.send(data[i:i+tam_pacote])
 
-    end_time = time.time()  
-    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {end_time - init_time}")
+    end_time = time.time()
+    final_time = round(end_time - init_time, 5)
+    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {final_time} segundos")
 
 
 print("=============================================================================")
