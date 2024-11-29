@@ -2,17 +2,16 @@ import socket
 import time
 import sys
 
-def run_server(host):
+def run_server(host, server_port):
     # Criando o socket do servidor
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     server_ip = socket.gethostbyname(host)
-    port = 8000
 
     # associal o socket ao endereço local e porta específicos
-    server.bind((server_ip, port))
+    server.bind((server_ip, server_port))
 
-    print(f"Socket associado em {server_ip}:{port}...")
+    print(f"Socket associado em {server_ip}:{server_port}...")
 
     while True:
         data, cliente_addr = server.recvfrom(1024)
@@ -95,6 +94,7 @@ print("=========================================================================
 if len(sys.argv) < 2:
     print("Número de argumentos errados")
     sys.exit(1)
-host = sys.argv[1]                             # Host do servidor
+host = sys.argv[1]                                # Host do servidor
+server_port =  sys.argv[2]                        # Porta do servidor        
 
-run_server(host)
+run_server(host, server_port)

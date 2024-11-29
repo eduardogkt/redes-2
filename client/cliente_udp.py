@@ -3,13 +3,12 @@ import time
 import sys
 
 
-def run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes):
+def run_client(metrica, tam_pacote, nome_arquivo, num_bytes,host, server_port):
     # Criando o socket do cliente
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     client.settimeout(5)
 
     server_ip = socket.gethostbyname(host)
-    server_port = 8000
 
     # Mandando requisição dos dados para o servidor
     requisicao = f"{metrica} {tam_pacote} {nome_arquivo} {num_bytes}"
@@ -66,9 +65,10 @@ if len(sys.argv) < 4:
 
 metrica = sys.argv[1].lower()              # Tipo arquivo ou memória
 tam_pacote = int(sys.argv[2])              # Tamanho do pacote a cada 
-nome_arquivo = sys.argv[3].lower()         
-host = sys.argv[4]
-num_bytes = int(sys.argv[5])
+nome_arquivo = sys.argv[3].lower()         # Arquivo onde será escrito os dados
+num_bytes = int(sys.argv[4])               # Número de bytes que será transferido em memória
+host = sys.argv[5]                         # Nome do host do servidor
+server_port = sys.argv[6]                  # Porta do servidor
 
 
-run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes)
+run_client(metrica, tam_pacote, nome_arquivo, num_bytes,host, server_port)

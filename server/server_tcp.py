@@ -2,21 +2,20 @@ import socket
 import time
 import sys
 
-def run_server(host):
+def run_server(host, server_port):
     # Criando o socket do servidor
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     server_ip = socket.gethostbyname(host)
-    port = 8000
 
     # Associa o socket ao endereço local e porta específicos
-    server.bind((server_ip, port))
+    server.bind((server_ip, server_port))
 
 
     # escuta, a espera de pedidos de conexão
     server.listen(0)
 
-    print(f"Escutando em {server_ip}:{port}...")
+    print(f"Escutando em {server_ip}:{server_port}...")
 
     cliente, cliente_addr = server.accept() 
     print(f"Recebeu conexão em {cliente_addr}")
@@ -86,5 +85,6 @@ if len(sys.argv) < 2:
     print("Número de argumentos errados")
     sys.exit(1)
 host = sys.argv[1]                                # Host do servidor
+server_port =  sys.argv[2]                        # Porta do servidor        
 
-run_server(host)
+run_server(host, server_port)
