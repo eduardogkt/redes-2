@@ -4,12 +4,14 @@ import sys
 
 
 def run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes):
+    # Criando o socket do cliente
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     client.settimeout(5)
 
     server_ip = socket.gethostbyname(host)
     server_port = 8000
 
+    # Mandando requisição dos dados para o servidor
     requisicao = f"{metrica} {tam_pacote} {nome_arquivo} {num_bytes}"
     client.sendto(requisicao.encode(), (server_ip, server_port))
 
@@ -22,12 +24,13 @@ def run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes):
 def recebe_dados(client, tam_pacote, info, server_ip, server_port):
     print("Abrindo arquivo e preparando para receber os pacotes...")
     f = open(info, 'wb')
-    print(f'Recebendo pacotes de tamanho... {tam_pacote}')
+    print(f'Recebendo pacotes de tamanho {tam_pacote}...')
     pacotes_recebidos = 0
+
+    # Calculando o tempo e recebendo pacotes
     data, server_addr =  client.recvfrom(tam_pacote)
     pacotes_recebidos += 1
     init_time = time.time()
-
     while True:
         if (data == b'EOF'):
             break
@@ -36,12 +39,13 @@ def recebe_dados(client, tam_pacote, info, server_ip, server_port):
             data, server_addr = client.recvfrom(tam_pacote)
             pacotes_recebidos += 1
         except socket.timeout:
-            print("Ocoreu Timeout")
+            print("Ocorreu Timeout")
             break
-        #print(f'recebeu1 {data}')
+        
     end_time = time.time()
     f.close()
     final_time = round(end_time - init_time, 5)
+    print("Acabou a transmissão")
     print(f"Tempo de recebimento UDP de um arquivo: {final_time} segundos")
     print(f"Número de pacotes recebidos: {pacotes_recebidos}")
 

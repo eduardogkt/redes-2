@@ -3,13 +3,13 @@ import time
 import sys
 
 def run_server(host):
-    # create a socket object
+    # Criando o socket do servidor
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     server_ip = socket.gethostbyname(host)
     port = 8000
 
-    # associal o socket ao endereço local e porta específicos
+    # Associa o socket ao endereço local e porta específicos
     server.bind((server_ip, port))
 
 
@@ -22,6 +22,7 @@ def run_server(host):
     print(f"Recebeu conexão em {cliente_addr}")
 
     while True:
+        # Recebe a requisição do cliente
         data, cliente_addr = cliente.recvfrom(1024)
         data = data.decode()
         msg = data.split()
@@ -40,12 +41,15 @@ def run_server(host):
     # desaloca socket do servidor
     server.close()
     print("Transmissão finalizada")
+    print("=============================================================================")
 
+# Manda um arquivo solicitado pelo o cliente e calcula o tempo de envio
 def mandando_arquivo(cliente, tam_pacote, nome_arquivo):
     print(f"Mandando o arquivo {nome_arquivo} para cliente TCP")
     print(f"Mandando {tam_pacote} bytes por vez... ")
     f = open(nome_arquivo,'rb')
 
+    # Começo do envio
     init_time = time.time()
     data = f.read(tam_pacote)
     while(data != b''):
@@ -56,7 +60,7 @@ def mandando_arquivo(cliente, tam_pacote, nome_arquivo):
     end_time = time.time()
     final_time = round(end_time - init_time, 5)
 
-    print(f"Tempo de envio do arquivo do servior TCP: {final_time} segundos")
+    print(f"Tempo de envio do arquivo do servidor TCP: {final_time} segundos")
 
 
 def mandando_memoria_principal(cliente, tam_pacote, num_bytes):
@@ -70,7 +74,7 @@ def mandando_memoria_principal(cliente, tam_pacote, num_bytes):
 
     end_time = time.time()
     final_time = round(end_time - init_time, 5)
-    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {final_time} segundos")
+    print(f"Tempo de envio do servidor UDP de {num_bytes} bytes em memoria principal: {final_time} segundos")
 
 
 print("=============================================================================")
@@ -81,6 +85,6 @@ print("=========================================================================
 if len(sys.argv) < 2:
     print("Número de argumentos errados")
     sys.exit(1)
-host = sys.argv[1]
+host = sys.argv[1]                                # Host do servidor
 
 run_server(host)

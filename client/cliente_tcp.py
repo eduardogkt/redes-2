@@ -4,6 +4,7 @@ import sys
 
 
 def run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes):
+    # Criando o socket do cliente
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     server_ip = socket.gethostbyname(host)
@@ -25,13 +26,16 @@ def run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes):
     print("=============================================================================")
 
 def recebe_dados(metrica, client, tam_pacote, nome_arquivo, num_bytes):
+
+    # Mandando requisição dos dados para o servidor
     requisicao = f"{metrica} {tam_pacote} {nome_arquivo} {num_bytes}"
     client.send(requisicao.encode())
 
     print("Abrindo arquivo e preparando para receber os pacotes...")
     f = open(nome_arquivo, 'wb')
-    print(f'Recebendo pacotes de tamanho... {tam_pacote}')
+    print(f'Recebendo pacotes de tamanho {tam_pacote}...')
 
+    # Calculando o tempo e recebendo pacotes
     data =  client.recv(tam_pacote)
     init_time = time.time()
     while True:
@@ -39,13 +43,12 @@ def recebe_dados(metrica, client, tam_pacote, nome_arquivo, num_bytes):
             break
         f.write(data)
         data = client.recv(tam_pacote)
-        #print(f'recebeu1 {data}')
     end_time = time.time()
     f.close()
     print('Acabou a transmissão')
 
-    final_time = round(end_time - init_time, 3)
-    print(f"Tempo de recebimento TCP de um arquivo: {final_time} segundos")
+    final_time = round(end_time - init_time, 5)
+    print(f"Tempo de recebimento TCP de dados: {final_time} segundos")
   
     
 
@@ -63,9 +66,9 @@ if len(sys.argv) < 4:
 
 metrica = sys.argv[1].lower()              # Tipo arquivo ou memória
 tam_pacote = int(sys.argv[2])              # Tamanho do pacote a cada 
-nome_arquivo = sys.argv[3].lower()
-host = sys.argv[4]
-num_bytes = int(sys.argv[5])
+nome_arquivo = sys.argv[3].lower()         # Arquivo onde será escrito os dados
+host = sys.argv[4]                         # Nome do host do servidor
+num_bytes = int(sys.argv[5])               # Número de bytes que será transferido em memória
 
 
 run_client(metrica, tam_pacote, nome_arquivo, host, num_bytes)

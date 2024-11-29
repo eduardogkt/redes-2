@@ -3,7 +3,7 @@ import time
 import sys
 
 def run_server(host):
-    # create a socket object
+    # Criando o socket do servidor
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     server_ip = socket.gethostbyname(host)
@@ -27,10 +27,12 @@ def run_server(host):
         else:
             pacotes_enviados = mandando_memoria_principal(server, cliente_addr, tam_pacote, int(num_bytes))
         print(pacotes_enviados)
+        # Recebe resposta do cliente quantos pacotes ele recebeu
         data, cliente_addr = server.recvfrom(1024)
         pacotes_recebidos = int(data.decode())
         break
 
+    # Calcula as métricas
     porcentagem = (pacotes_recebidos / pacotes_enviados) * 100
     porcentagem_arrendondada = round(porcentagem, 2)
     print(f"O servidor UDP enviou {pacotes_enviados} e o cliente UDP recebeu {pacotes_recebidos}")
@@ -41,32 +43,34 @@ def run_server(host):
     print("Transmissão finalizada")
     print("=============================================================================")
 
-def mandando_arquivo(server, cliente_addr, tam_pacote, info):
-    print(f"Mandando o arquivo {info} para cliente UDP")
+# Manda um arquivo solicitado pelo o cliente e calcula o tempo de envio
+def mandando_arquivo(server, cliente_addr, tam_pacote, nome_arquivo):
+    print(f"Mandando o arquivo {nome_arquivo} para cliente UDP")
     print(f"Mandando {tam_pacote} bytes por vez... ")
-    f = open(info,'rb')
+    f = open(nome_arquivo,'rb')
     pacotes_enviados = 0
 
+    # Começo do envio
     init_time = time.time()
     data = f.read(tam_pacote)
     while(data != b''):
         server.sendto(data, cliente_addr)
         pacotes_enviados  += 1
         data = f.read(tam_pacote)
-
     f.close()
+    # Manda fim de arquivo
     server.sendto(b'EOF', cliente_addr)
     pacotes_enviados += 1
     end_time = time.time()
 
     final_time = round(end_time - init_time, 5)
-    print(f"Tempo de envio do arquivo do servior TCP: {final_time} segundos")
+    print(f"Tempo de envio do arquivo do servidor UDP: {final_time} segundos")
 
     return pacotes_enviados
 
 def mandando_memoria_principal(server, cliente_addr, tam_pacote, num_bytes):
     data = b'a' * num_bytes
-    print(f"Mandando um dado de {num_bytes} bytes em memória principal para o cliente TCP")
+    print(f"Mandando um dado de {num_bytes} bytes em memória principal para o cliente UDP")
     print(f"Mandando {tam_pacote} bytes por vez... ")
     pacotes_enviados = 0
 
@@ -80,7 +84,7 @@ def mandando_memoria_principal(server, cliente_addr, tam_pacote, num_bytes):
     pacotes_enviados += 1
     end_time = time.time()
     final_time = round(end_time - init_time, 5)
-    print(f"Tempo de envio TCP de {num_bytes} bytes em memoria principal: {final_time}")
+    print(f"Tempo de envio do servidor UDP de {num_bytes} bytes em memoria principal: {final_time}")
     return pacotes_enviados
 
 print("=============================================================================")
@@ -91,6 +95,6 @@ print("=========================================================================
 if len(sys.argv) < 2:
     print("Número de argumentos errados")
     sys.exit(1)
-host = sys.argv[1]
+host = sys.argv[1]                             # Host do servidor
 
 run_server(host)
