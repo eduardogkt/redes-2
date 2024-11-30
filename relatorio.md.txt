@@ -73,4 +73,9 @@ Cliente para tranferência de dados em memória:
 python3 cliente_udp.py memoria 1024 exemplo.txt 100000 i29 8000
 ```
 
+### Testes
+
+
+
 ### Conclusões
+
