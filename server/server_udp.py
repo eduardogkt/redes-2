@@ -86,15 +86,18 @@ def mandando_memoria_principal(server, cliente_addr, tam_pacote, num_bytes):
     print(f"Tempo de envio do servidor UDP de {num_bytes} bytes em memoria principal: {final_time}")
     return pacotes_enviados
 
+
+
+if len(sys.argv) < 2:
+    print("Número de argumentos errados")
+    print(f"Uso: python3 {sys.argv[0]} <host> <server_port>")
+    sys.exit(1)
+host = sys.argv[1]                                # Host do servidor
+server_port = int(sys.argv[2])                    # Porta do servidor        
+
 print("=============================================================================")
 print("Inicio da execução: programa que calcula métricas UDP lado servidor")
 print("Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2")
 print("=============================================================================")
-
-if len(sys.argv) < 2:
-    print("Número de argumentos errados")
-    sys.exit(1)
-host = sys.argv[1]                                # Host do servidor
-server_port = int(sys.argv[2])                    # Porta do servidor        
 
 run_server(host, server_port)
