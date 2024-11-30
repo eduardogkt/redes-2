@@ -1,0 +1,25 @@
+LOG CLIENT UDP
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 1500...
+Acabou a transmissão
+Tempo de recebimento UDP de um arquivo: 0.16923 segundos
+Número de pacotes recebidos: 35971
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 1500...
+Acabou a transmissão
+Tempo de recebimento UDP de um arquivo: 0.16975 segundos
+Número de pacotes recebidos: 41611
+Transmissão finalizada
+=============================================================================
+

@@ -25,7 +25,6 @@ def run_server(host, server_port):
             pacotes_enviados = mandando_arquivo(server, cliente_addr, tam_pacote, nome_arquivo)
         else:
             pacotes_enviados = mandando_memoria_principal(server, cliente_addr, tam_pacote, int(num_bytes))
-        print(pacotes_enviados)
         # Recebe resposta do cliente quantos pacotes ele recebeu
         data, cliente_addr = server.recvfrom(1024)
         pacotes_recebidos = int(data.decode())
@@ -41,7 +40,8 @@ def run_server(host, server_port):
     server.close()
     print("Transmissão finalizada")
     print("=============================================================================")
-
+    print()
+    
 # Manda um arquivo solicitado pelo o cliente e calcula o tempo de envio
 def mandando_arquivo(server, cliente_addr, tam_pacote, nome_arquivo):
     print(f"Mandando o arquivo {nome_arquivo} para cliente UDP")
@@ -98,6 +98,6 @@ server_port = int(sys.argv[2])                    # Porta do servidor
 print("=============================================================================")
 print("Inicio da execução: programa que calcula métricas UDP lado servidor")
 print("Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2")
-print("=============================================================================")
+print()
 
 run_server(host, server_port)

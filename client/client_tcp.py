@@ -23,6 +23,7 @@ def run_client(metrica, tam_pacote, nome_arquivo, num_bytes,host, server_port):
     client.close()
     print("Transmissão finalizada")
     print("=============================================================================")
+    print()
 
 def recebe_dados(metrica, client, tam_pacote, nome_arquivo, num_bytes):
 
@@ -30,7 +31,7 @@ def recebe_dados(metrica, client, tam_pacote, nome_arquivo, num_bytes):
     requisicao = f"{metrica} {tam_pacote} {nome_arquivo} {num_bytes}"
     client.send(requisicao.encode())
 
-    print("Abrindo arquivo e preparando para receber os pacotes...")
+    print(f"Abrindo arquivo '{nome_arquivo}' e preparando para receber os pacotes...")
     f = open(nome_arquivo, 'wb')
     print(f'Recebendo pacotes de tamanho {tam_pacote}...')
 
@@ -66,6 +67,6 @@ server_port = int(sys.argv[6])             # Porta do servidor
 print("=============================================================================")
 print("Inicio da execução: programa que calcula métricas TCP lado cliente")
 print("Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2")
-print("=============================================================================")
+print()
 
 run_client(metrica, tam_pacote, nome_arquivo, num_bytes,host, server_port)

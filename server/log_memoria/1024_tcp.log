@@ -1,0 +1,25 @@
+LOG SERVER TCP
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Escutando em 192.168.100.110:8013...
+Recebeu conexão em ('192.168.100.110', 57806)
+Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
+Mandando 1024 bytes por vez... 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00428 segundos
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Escutando em 192.168.100.110:8014...
+Recebeu conexão em ('192.168.100.110', 34996)
+Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
+Mandando 1024 bytes por vez... 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.0035 segundos
+Transmissão finalizada
+=============================================================================
+

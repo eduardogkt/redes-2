@@ -41,6 +41,7 @@ def run_server(host, server_port):
     server.close()
     print("Transmissão finalizada")
     print("=============================================================================")
+    print()
 
 # Manda um arquivo solicitado pelo o cliente e calcula o tempo de envio
 def mandando_arquivo(cliente, tam_pacote, nome_arquivo):
@@ -87,6 +88,6 @@ server_port = int(sys.argv[2])                    # Porta do servidor
 print("=============================================================================")
 print("Inicio da execução: programa que calcula métricas TCP lado servidor")
 print("Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2")
-print("=============================================================================")
+print()
 
 run_server(host, server_port)

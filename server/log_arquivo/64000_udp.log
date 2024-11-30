@@ -1,0 +1,27 @@
+LOG SERVER UDP
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8033...
+Mandando o arquivo 80mb.txt para cliente UDP
+Mandando 64000 bytes por vez... 
+Tempo de envio do arquivo do servidor UDP: 0.03121 segundos
+O servidor UDP enviou 1270 e o cliente UDP recebeu 434
+O cliente UDP recebeu 34.17% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8034...
+Mandando o arquivo 80mb.txt para cliente UDP
+Mandando 64000 bytes por vez... 
+Tempo de envio do arquivo do servidor UDP: 0.02672 segundos
+O servidor UDP enviou 1270 e o cliente UDP recebeu 479
+O cliente UDP recebeu 37.72% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
