@@ -75,7 +75,28 @@ python3 cliente_udp.py memoria 1024 exemplo.txt 100000 i29 8000
 
 ### Testes
 
+Para testar os protocolos TCP e UDP foram realizado testes feitos para comparar a transfêrencia de um arquivo de 80MB e 
+transfêrencia de dados em memória principal de 100MB.
+Os testes foram feitos com o tamanho de pacotes diversos em bytes: 64k, 10k, 5k, 1500, 1024, 100 e 20.
+Para cada tamanho de pacote, foi realizado 5 execuções e foi feita uma média entre elas para calcular o tempo de 
+recebimento cliente TCP, tempo de recebimento cliente UDP e a porcentagem de pacotes recebidos em relação ao total do clinte UDP.
 
+IMAGEM MEMORIA E ARQUIVO E GRAFICOS
+
+No primeiro momento é visível que em todos os casos, a transferência em memória principal é bem mais rápida que a transferência 
+de arquivo. Como é o esperado, o tempo do UDP é menor que TCP, no entanto, para pacotes pequenos como o de 20 e de 100, o tempo do UDP
+acabou sendo maior, devido ao buffer e também em casos que leva ao timeout já que o cliente não recebe a ultima mensagem(EOF).
+
+Para pacotes grandes o recebimento do cliente UDP é quase 100%. Para pacotes pequenos, o recebimento dos pacotes caem drasticamente.
+
+Durante nossos testes, para pacotes pequenos, existiam execuções em que o recebimento era de quase 100% e outros casos em que leva o timeout
+e os pacotes recebidos eram poucos. 
 
 ### Conclusões
 
+Durante os testes realizados, foi concluido que apesar do protocolo UDP levar vantagem no tempo para enviar dados, o tempo foi mais ou menos similar
+ao TCP. Além disso, em quase todos os testes, o recebimento dos pacotes não foi de 100% no protocolo UDP. A situação piora se for mandado pacotes pequenos 
+em que muitos pacotes acabam se perdendo já que o UDP não implementa controle de fluxo, como consequência o tempo de recebimento fica pior que o do TCP. 
+
+Por essas razões, concluimos que na maioria dos casos, a utilização do protoclo TCP é melhor que do protocolo UDP, já que o protocolo TCP é confiável
+e orientado a conexão, além de implementar um controle de fluxo e de congestionamento.
