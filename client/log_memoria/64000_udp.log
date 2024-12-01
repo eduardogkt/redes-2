@@ -3,12 +3,12 @@ LOG CLIENT UDP
 Inicio da execução: programa que calcula métricas TCP lado cliente
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
 Recebendo pacotes de tamanho 64000...
 Ocorreu Timeout
 Acabou a transmissão
-Tempo de recebimento UDP de um arquivo: 5.002 segundos
-Número de pacotes recebidos: 7
+Tempo de recebimento UDP de um arquivo: 5.00558 segundos
+Número de pacotes recebidos: 8
 Transmissão finalizada
 =============================================================================
 
@@ -16,12 +16,12 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas TCP lado cliente
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
 Recebendo pacotes de tamanho 64000...
 Ocorreu Timeout
 Acabou a transmissão
-Tempo de recebimento UDP de um arquivo: 5.00556 segundos
-Número de pacotes recebidos: 10
+Tempo de recebimento UDP de um arquivo: 5.00433 segundos
+Número de pacotes recebidos: 9
 Transmissão finalizada
 =============================================================================
 
@@ -29,11 +29,11 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas TCP lado cliente
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
 Recebendo pacotes de tamanho 64000...
 Ocorreu Timeout
 Acabou a transmissão
-Tempo de recebimento UDP de um arquivo: 5.00217 segundos
+Tempo de recebimento UDP de um arquivo: 5.00572 segundos
 Número de pacotes recebidos: 8
 Transmissão finalizada
 =============================================================================

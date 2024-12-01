@@ -3,11 +3,11 @@ LOG CLIENT UDP
 Inicio da execução: programa que calcula métricas TCP lado cliente
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
 Recebendo pacotes de tamanho 64000...
 Acabou a transmissão
-Tempo de recebimento UDP de um arquivo: 0.02634 segundos
-Número de pacotes recebidos: 434
+Tempo de recebimento UDP de um arquivo: 0.04151 segundos
+Número de pacotes recebidos: 539
 Transmissão finalizada
 =============================================================================
 
@@ -15,12 +15,38 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas TCP lado cliente
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Abrindo arquivo '80mb.txt' e preparando para receber os pacotes...
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
 Recebendo pacotes de tamanho 64000...
 Ocorreu Timeout
 Acabou a transmissão
-Tempo de recebimento UDP de um arquivo: 5.02502 segundos
-Número de pacotes recebidos: 479
+Tempo de recebimento UDP de um arquivo: 5.04683 segundos
+Número de pacotes recebidos: 653
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 64000...
+Ocorreu Timeout
+Acabou a transmissão
+Tempo de recebimento UDP de um arquivo: 5.05164 segundos
+Número de pacotes recebidos: 622
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 64000...
+Ocorreu Timeout
+Acabou a transmissão
+Tempo de recebimento UDP de um arquivo: 5.0878 segundos
+Número de pacotes recebidos: 305
 Transmissão finalizada
 =============================================================================
 

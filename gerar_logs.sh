@@ -33,7 +33,7 @@ port=8000
 echo "TESTES UDP"
 echo "METRICA $metrica"
 
-for tam_pacote in {20,100,1024,1500,5000,10000,64000};
+for tam_pacote in {20,100,1024,1500,2000,4000,5000,10000,64000};
 do
     echo "PACOTE TAM $tam_pacote"
     log="$log_dir/${tam_pacote}_udp.log"
@@ -66,7 +66,7 @@ port=8000
 echo "TESTES TCP"
 echo "METRICA $metrica"
 
-for tam_pacote in {20,100,1024,1500,5000,10000,64000};
+for tam_pacote in {20,100,1024,1500,2000,4000,5000,10000,64000};
 do
     echo "PACOTE TAM $tam_pacote"
     log="$log_dir/${tam_pacote}_tcp.log"

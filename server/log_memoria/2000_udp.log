@@ -1,0 +1,57 @@
+LOG SERVER UDP
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8023...
+Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
+Mandando 2000 bytes por vez... 
+mandando EOF
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00219
+O servidor UDP enviou 501 e o cliente UDP recebeu 478
+O cliente UDP recebeu 95.41% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8021...
+Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
+Mandando 2000 bytes por vez... 
+mandando EOF
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.0023
+O servidor UDP enviou 501 e o cliente UDP recebeu 335
+O cliente UDP recebeu 66.87% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8024...
+Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
+Mandando 2000 bytes por vez... 
+mandando EOF
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00158
+O servidor UDP enviou 501 e o cliente UDP recebeu 259
+O cliente UDP recebeu 51.7% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8022...
+Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
+Mandando 2000 bytes por vez... 
+mandando EOF
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00139
+O servidor UDP enviou 501 e o cliente UDP recebeu 222
+O cliente UDP recebeu 44.31% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+

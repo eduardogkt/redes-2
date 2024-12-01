@@ -4,11 +4,11 @@ Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Socket associado em 192.168.100.110:8000...
-Mandando o arquivo 80mb.txt para cliente UDP
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 20 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 18.97156 segundos
-O servidor UDP enviou 4059290 e o cliente UDP recebeu 3457650
-O cliente UDP recebeu 85.18% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 48.58832 segundos
+O servidor UDP enviou 5242883 e o cliente UDP recebeu 4415299
+O cliente UDP recebeu 84.22% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -17,11 +17,11 @@ Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Socket associado em 192.168.100.110:8001...
-Mandando o arquivo 80mb.txt para cliente UDP
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 20 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 23.69995 segundos
-O servidor UDP enviou 4059290 e o cliente UDP recebeu 3296994
-O cliente UDP recebeu 81.22% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 53.71896 segundos
+O servidor UDP enviou 5242883 e o cliente UDP recebeu 4127624
+O cliente UDP recebeu 78.73% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -30,24 +30,11 @@ Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Socket associado em 192.168.100.110:8002...
-Mandando o arquivo 80mb.txt para cliente UDP
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 20 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 28.41233 segundos
-O servidor UDP enviou 4059290 e o cliente UDP recebeu 3242278
-O cliente UDP recebeu 79.87% dos pacotes enviados 
-Transmissão finalizada
-=============================================================================
-
-=============================================================================
-Inicio da execução: programa que calcula métricas UDP lado servidor
-Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
-
-Socket associado em 192.168.100.110:8004...
-Mandando o arquivo 80mb.txt para cliente UDP
-Mandando 20 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 27.42138 segundos
-O servidor UDP enviou 4059290 e o cliente UDP recebeu 3202732
-O cliente UDP recebeu 78.9% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 57.33121 segundos
+O servidor UDP enviou 5242883 e o cliente UDP recebeu 4073207
+O cliente UDP recebeu 77.69% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -56,11 +43,24 @@ Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Socket associado em 192.168.100.110:8003...
-Mandando o arquivo 80mb.txt para cliente UDP
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 20 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 28.05498 segundos
-O servidor UDP enviou 4059290 e o cliente UDP recebeu 3177182
-O cliente UDP recebeu 78.27% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 58.2876 segundos
+O servidor UDP enviou 5242883 e o cliente UDP recebeu 4093029
+O cliente UDP recebeu 78.07% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8004...
+Mandando o arquivo 100mb.txt para cliente UDP
+Mandando 20 bytes por vez... 
+Tempo de envio do arquivo do servidor UDP: 57.08051 segundos
+O servidor UDP enviou 5242883 e o cliente UDP recebeu 4165896
+O cliente UDP recebeu 79.46% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 

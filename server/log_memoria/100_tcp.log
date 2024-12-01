@@ -4,10 +4,10 @@ Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Escutando em 192.168.100.110:8008...
-Recebeu conexão em ('192.168.100.110', 48790)
+Recebeu conexão em ('192.168.100.110', 55472)
 Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
 Mandando 100 bytes por vez... 
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00938 segundos
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.01318 segundos
 Transmissão finalizada
 =============================================================================
 
@@ -16,10 +16,10 @@ Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Escutando em 192.168.100.110:8009...
-Recebeu conexão em ('192.168.100.110', 41446)
+Recebeu conexão em ('192.168.100.110', 43432)
 Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
 Mandando 100 bytes por vez... 
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.0085 segundos
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.01378 segundos
 Transmissão finalizada
 =============================================================================
 

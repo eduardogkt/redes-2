@@ -3,11 +3,11 @@ LOG SERVER TCP
 Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Escutando em 192.168.100.110:8028...
-Recebeu conexão em ('192.168.100.110', 38212)
+Escutando em 192.168.100.110:8038...
+Recebeu conexão em ('192.168.100.110', 44386)
 Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
 Mandando 10000 bytes por vez... 
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00057 segundos
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00054 segundos
 Transmissão finalizada
 =============================================================================
 
@@ -15,11 +15,11 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Escutando em 192.168.100.110:8029...
-Recebeu conexão em ('192.168.100.110', 51470)
+Escutando em 192.168.100.110:8039...
+Recebeu conexão em ('192.168.100.110', 51682)
 Mandando um dado de 1000000 bytes em memória principal para o cliente TCP
 Mandando 10000 bytes por vez... 
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00052 segundos
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.0006 segundos
 Transmissão finalizada
 =============================================================================
 

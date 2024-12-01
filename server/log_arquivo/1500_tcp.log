@@ -4,10 +4,10 @@ Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Escutando em 192.168.100.110:8018...
-Recebeu conexão em ('192.168.100.110', 44352)
-Mandando o arquivo 80mb.txt para cliente TCP
+Recebeu conexão em ('192.168.100.110', 58014)
+Mandando o arquivo 100mb.txt para cliente TCP
 Mandando 1500 bytes por vez... 
-Tempo de envio do arquivo do servidor TCP: 0.17811 segundos
+Tempo de envio do arquivo do servidor TCP: 0.36895 segundos
 Transmissão finalizada
 =============================================================================
 
@@ -16,10 +16,10 @@ Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
 Escutando em 192.168.100.110:8019...
-Recebeu conexão em ('192.168.100.110', 54460)
-Mandando o arquivo 80mb.txt para cliente TCP
+Recebeu conexão em ('192.168.100.110', 38044)
+Mandando o arquivo 100mb.txt para cliente TCP
 Mandando 1500 bytes por vez... 
-Tempo de envio do arquivo do servidor TCP: 0.19931 segundos
+Tempo de envio do arquivo do servidor TCP: 0.49677 segundos
 Transmissão finalizada
 =============================================================================
 
