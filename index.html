@@ -27,22 +27,6 @@
       <br />
       <br />
 
-      <h2>Relatório</h2>
-      <span>Relatório: </span>
-      <a href="relatorio.md.txt">relatario.md.txt</a>
-      <br />
-      <br />
-
-      <h2><strong>Descrição</strong></h2>
-      <p>Este trabalho tem como objetivo comparar o desempenho dos protocolos TCP e UDP.</p>
-      <p>Para isso, foram consideradas as metricas de tempo de recebimento e perda de dados na 
-        transferencia de arquivos e transferencia em memória principal entre servidor e 
-        cliente.</p>
-      <p>Os programas de teste foram implementados em python utilizando as bibliotecas: </p>
-      <p> **socket** para comunicação entre as máquinas;  </p>
-      <p> **time** para contagem de tempo; </p>
-      <p> **sys** para manipular entrada e saida padrão; </p>
-
       <h2>Código Fonte</h2>
       <span>TCP: </span>
       <a href="./client/client_tcp.py.txt">cliente</a>
@@ -54,25 +38,8 @@
       <br />
       <br />
 
-      <h2>Executando o trabalho</h2>
-      <p>Para executar o trabalho com conexão TCP são utilzados os arquivos cliente_tcp.py 
-        e server_tcp.py. Para a conexão UDP são utilizados os arquivos cliente_udp.py e 
-        server_udp.py.</p>
-      <p>O server pode ser executado com o seguinte comando:</p>
-      <p><b>python3 server_udp.py 'host' 'port'</b></p>
-      <p>Em que 'host' é o nome da máquina do server e 'port' a porta para a comunicação</p>
-      <p>E o cliente pode ser executado com o seguinte comando:</p>
-      <p><b>python3 cliente_udp.py 'metrica' 'tam_pacote' 'nome_arquivo' 'num_bytes' 'host' 'port'</b></p>
-      <p>Em que:</p>
-      <p> 'métrica' pode ser "arquivo" para transferência de arquivo ou "memoria" para transferir em memória principal.</p>
-      <p>'tam_pacote' é o tamanho em bytes que o server vai mandar em cada pacote.</p>
-      <p>'nome_arquivo' é o arquivo que o cliente deseja obter do server e escrever em seu diretório</p>
-      <p>'num_bytes' é o tamanho de bytes a ser transferido em memória, para arquivos usa-se 0.</p>
-      <p>'host' é o nome da máquina do server</p>
-      <p></p>
       <h2>Logs</h2>
       <span>Diretorios dos arquivos de log: </span>
-      <br />
       <br />
       <span>Trasferência de dados de memória: </span>
       <a href="./client/log_memoria/">dir cliente</a>
@@ -84,6 +51,171 @@
       <br />
       <br />
       <a href="./server/log_memoria/1024_udp.log">exemplo de arquivo de log</a>
+      <br />
+      <br />
+
+      <h2>Relatório</h2>
+      <span>Relatório: </span>
+      <a href="relatorio.md.txt">relatario.md.txt</a>
+      <br />
+      <br />
+
+      <span>Descrição</span>
+      <p>
+        Este trabalho tem como objetivo comparar o desempenho dos protocolos TCP
+        e UDP. Para isso, foram consideradas as metricas de tempo de recebimento
+        e perda de dados na transferencia de arquivos e transferencia em memória
+        principal entre servidor e cliente.
+      </p>
+      <p>
+        Os programas de teste foram implementados em python utilizando as
+        bibliotecas:
+      </p>
+      <li><strong>socket</strong> para comunicação entre as máquinas;</li>
+      <li><strong>time</strong> para contagem de tempo;</li>
+      <li><strong>sys</strong> para manipular entrada e saida padrão.</li>
+      <br />
+
+      <span>Executando o trabalho</span>
+      <p>
+        Para executar o trabalho com conexão TCP são utilzados os arquivos
+        <span>cliente_tcp.py</span> e <span>server_tcp.py</span>. Para a conexão
+        UDP são utilizados os arquivos <span>cliente_udp.py</span> e
+        <span>server_udp.py</span>.
+      </p>
+      <br />
+      <p>O server pode ser executado com o seguinte comando:</p>
+
+      <div>python3 server_udp.py 'host' 'port'</div>
+
+      <p>Em que:</p>
+      <li>'host' é o nome da máquina do server</li>
+      <li>'port' a porta para a comunicação</li>
+      <br />
+
+      <p>E o cliente pode ser executado com o seguinte comando:</p>
+
+      <div>
+        python3 cliente_udp.py 'metrica' 'tam_pacote' 'nome_arquivo' 'num_bytes'
+        'host' 'port'
+      </div>
+
+      <p>Em que:</p>
+      <li>
+        'métrica' pode ser "arquivo" para transferência de arquivo ou "memoria"
+        para transferir em memória principal.
+      </li>
+      <li>
+        'tam_pacote' é o tamanho em bytes que o server vai mandar em cada
+        pacote.
+      </li>
+      <li>
+        'nome_arquivo' é o arquivo que o cliente deseja obter do server e
+        escrever em seu diretório
+      </li>
+      <li>
+        'num_bytes' é o tamanho de bytes a ser transferido em memória, para
+        arquivos usa-se 0.
+      </li>
+      <li>'host' é o nome da máquina do server</li>
+      <br />
+
+      <span>
+        Exemplo para server executando na máquina i29, porta 8000 do dinf
+      </span>
+
+      <p>Server:</p>
+
+      <div>python3 server_udp.py i29</div>
+
+      <p>Cliente para tranferência de arquivo:</p>
+
+      <div>python3 cliente_udp.py arquivo 1024 exemplo.txt 0 i29 8000</div>
+
+      <p>Cliente para tranferência de dados em memória:</p>
+
+      <div>python3 cliente_udp.py memoria 1024 exemplo.txt 100000 i29 8000</div>
+      <br />
+
+      <span>Testes para os protocolos</span>
+      <br />
+      <br />
+
+      <img
+        class="tabela"
+        src="./files/tabela_arquivo.png"
+        alt="tabela trasferencia de arquivo"
+      />
+
+      <img
+        class="tabela"
+        src="./files/tabela_memoria.png"
+        alt="tabela trasferencia de dados na memoria"
+      />
+      <br />
+      <br />
+
+      <p>
+        Para testar os protocolos TCP e UDP foram realizado testes feitos para
+        comparar a transfêrencia de um arquivo de 80MB e transfêrencia de dados
+        em memória principal de 100MB. Os testes foram feitos com o tamanho de
+        pacotes diversos em bytes: 64k, 10k, 5k, 1500, 1024, 100 e 20. Para cada
+        tamanho de pacote, foi realizado 5 execuções e foi feita uma média entre
+        elas para calcular o tempo de recebimento cliente TCP, tempo de
+        recebimento cliente UDP e a porcentagem de pacotes recebidos em relação
+        ao total do cliente UDP.
+      </p>
+
+      <img
+        class="grafico"
+        src="./files/grafico_arquivo.png"
+        alt="grafico trasferencia de arquivo"
+      />
+
+      <img
+        class="grafico"
+        src="./files/grafico_memoria.png"
+        alt="grafico trasferencia de dados na memoria"
+      />
+      <br />
+      <br />
+
+      <p>
+        No primeiro momento é visível que em todos os casos, a transferência em
+        memória principal é bem mais rápida que a transferência de arquivo. Como
+        é o esperado, o tempo do UDP é menor que TCP, no entanto, para pacotes
+        pequenos como o de 20 e de 100, o tempo do UDP acabou sendo maior,
+        devido ao buffer e também em casos que leva ao timeout já que o cliente
+        não recebe a ultima mensagem (EOF).
+      </p>
+      <p>
+        Para pacotes grandes o recebimento do cliente UDP é quase 100%. Para
+        pacotes pequenos, o recebimento dos pacotes caem drasticamente.
+      </p>
+      <p>
+        Durante nossos testes, para pacotes pequenos, existiam execuções em que
+        o recebimento era de quase 100% e outros casos em que leva o timeout e
+        os pacotes recebidos eram poucos.
+      </p>
+
+      <br />
+
+      <span>Conclusões</span>
+      <p>
+        Durante os testes realizados, foi concluido que apesar do protocolo UDP
+        levar vantagem no tempo para enviar dados, o tempo foi mais ou menos
+        similar ao TCP. Além disso, em quase todos os testes, o recebimento dos
+        pacotes não foi de 100% no protocolo UDP. A situação piora se for
+        mandado pacotes pequenos em que muitos pacotes acabam se perdendo já que
+        o UDP não implementa controle de fluxo, como consequência o tempo de
+        recebimento fica pior que o do TCP.
+      </p>
+      <p>
+        Por essas razões, concluimos que na maioria dos casos, a utilização do
+        protoclo TCP é melhor que do protocolo UDP, já que o protocolo TCP é
+        confiável e orientado a conexão, além de implementar um controle de
+        fluxo e de congestionamento.
+      </p>
     </main>
   </body>
 </html>
