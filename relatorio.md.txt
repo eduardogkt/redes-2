@@ -76,12 +76,12 @@ python3 cliente_udp.py memoria 1024 exemplo.txt 100000 i29 8000
 ### Testes
 
 Para testar os protocolos TCP e UDP foram realizado testes feitos para comparar a transfêrencia de um arquivo de 80MB e 
-transfêrencia de dados em memória principal de 100MB.
+transfêrencia de dados em memória principal de 1 milhão de bytes.
 Os testes foram feitos com o tamanho de pacotes diversos em bytes: 64k, 10k, 5k, 1500, 1024, 100 e 20.
 Para cada tamanho de pacote, foi realizado 5 execuções e foi feita uma média entre elas para calcular o tempo de 
 recebimento cliente TCP, tempo de recebimento cliente UDP e a porcentagem de pacotes recebidos em relação ao total do clinte UDP.
 
-IMAGEM MEMORIA E ARQUIVO E GRAFICOS
+Resultados dos testes estão no diretório files.
 
 No primeiro momento é visível que em todos os casos, a transferência em memória principal é bem mais rápida que a transferência 
 de arquivo. Como é o esperado, o tempo do UDP é menor que TCP, no entanto, para pacotes pequenos como o de 20 e de 100, o tempo do UDP
