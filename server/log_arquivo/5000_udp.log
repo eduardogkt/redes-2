@@ -3,12 +3,12 @@ LOG SERVER UDP
 Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Socket associado em 192.168.100.110:8023...
-Mandando o arquivo 80mb.txt para cliente UDP
+Socket associado em 192.168.100.110:8033...
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 5000 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 0.08733 segundos
-O servidor UDP enviou 16239 e o cliente UDP recebeu 10492
-O cliente UDP recebeu 64.61% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 0.15526 segundos
+O servidor UDP enviou 20973 e o cliente UDP recebeu 9331
+O cliente UDP recebeu 44.49% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -16,12 +16,25 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Socket associado em 192.168.100.110:8024...
-Mandando o arquivo 80mb.txt para cliente UDP
+Socket associado em 192.168.100.110:8034...
+Mandando o arquivo 100mb.txt para cliente UDP
 Mandando 5000 bytes por vez... 
-Tempo de envio do arquivo do servidor UDP: 0.08227 segundos
-O servidor UDP enviou 16239 e o cliente UDP recebeu 7803
-O cliente UDP recebeu 48.05% dos pacotes enviados 
+Tempo de envio do arquivo do servidor UDP: 0.18401 segundos
+O servidor UDP enviou 20973 e o cliente UDP recebeu 10954
+O cliente UDP recebeu 52.23% dos pacotes enviados 
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas UDP lado servidor
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Socket associado em 192.168.100.110:8032...
+Mandando o arquivo 100mb.txt para cliente UDP
+Mandando 5000 bytes por vez... 
+Tempo de envio do arquivo do servidor UDP: 0.16058 segundos
+O servidor UDP enviou 20973 e o cliente UDP recebeu 9835
+O cliente UDP recebeu 46.89% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 

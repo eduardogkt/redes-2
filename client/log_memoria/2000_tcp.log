@@ -1,0 +1,27 @@
+LOG CLIENT TCP
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Cliente conectando com o servidor...
+Conectado com sucesso!
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 2000...
+Acabou a transmissão
+Tempo de recebimento TCP de dados: 0.00304 segundos
+Transmissão finalizada
+=============================================================================
+
+=============================================================================
+Inicio da execução: programa que calcula métricas TCP lado cliente
+Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
+
+Cliente conectando com o servidor...
+Conectado com sucesso!
+Abrindo arquivo '100mb.txt' e preparando para receber os pacotes...
+Recebendo pacotes de tamanho 2000...
+Acabou a transmissão
+Tempo de recebimento TCP de dados: 0.00292 segundos
+Transmissão finalizada
+=============================================================================
+

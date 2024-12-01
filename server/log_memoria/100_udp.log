@@ -7,9 +7,9 @@ Socket associado em 192.168.100.110:8008...
 Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
 Mandando 100 bytes por vez... 
 mandando EOF
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.036
-O servidor UDP enviou 10001 e o cliente UDP recebeu 10001
-O cliente UDP recebeu 100.0% dos pacotes enviados 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.03405
+O servidor UDP enviou 10001 e o cliente UDP recebeu 8855
+O cliente UDP recebeu 88.54% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -21,9 +21,9 @@ Socket associado em 192.168.100.110:8009...
 Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
 Mandando 100 bytes por vez... 
 mandando EOF
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.02603
-O servidor UDP enviou 10001 e o cliente UDP recebeu 9931
-O cliente UDP recebeu 99.3% dos pacotes enviados 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.03955
+O servidor UDP enviou 10001 e o cliente UDP recebeu 8214
+O cliente UDP recebeu 82.13% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 

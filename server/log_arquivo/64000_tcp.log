@@ -3,11 +3,11 @@ LOG SERVER TCP
 Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Escutando em 192.168.100.110:8033...
-Recebeu conexão em ('192.168.100.110', 51276)
-Mandando o arquivo 80mb.txt para cliente TCP
+Escutando em 192.168.100.110:8043...
+Recebeu conexão em ('192.168.100.110', 58508)
+Mandando o arquivo 100mb.txt para cliente TCP
 Mandando 64000 bytes por vez... 
-Tempo de envio do arquivo do servidor TCP: 0.07314 segundos
+Tempo de envio do arquivo do servidor TCP: 0.15331 segundos
 Transmissão finalizada
 =============================================================================
 
@@ -15,11 +15,11 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas TCP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Escutando em 192.168.100.110:8034...
-Recebeu conexão em ('192.168.100.110', 33280)
-Mandando o arquivo 80mb.txt para cliente TCP
+Escutando em 192.168.100.110:8044...
+Recebeu conexão em ('192.168.100.110', 50264)
+Mandando o arquivo 100mb.txt para cliente TCP
 Mandando 64000 bytes por vez... 
-Tempo de envio do arquivo do servidor TCP: 0.05845 segundos
+Tempo de envio do arquivo do servidor TCP: 0.10682 segundos
 Transmissão finalizada
 =============================================================================
 

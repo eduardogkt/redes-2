@@ -3,13 +3,13 @@ LOG SERVER UDP
 Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Socket associado em 192.168.100.110:8023...
+Socket associado em 192.168.100.110:8031...
 Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
 Mandando 5000 bytes por vez... 
 mandando EOF
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00072
-O servidor UDP enviou 201 e o cliente UDP recebeu 77
-O cliente UDP recebeu 38.31% dos pacotes enviados 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00076
+O servidor UDP enviou 201 e o cliente UDP recebeu 82
+O cliente UDP recebeu 40.8% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -17,13 +17,13 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Socket associado em 192.168.100.110:8024...
+Socket associado em 192.168.100.110:8034...
 Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
 Mandando 5000 bytes por vez... 
 mandando EOF
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.0009
-O servidor UDP enviou 201 e o cliente UDP recebeu 141
-O cliente UDP recebeu 70.15% dos pacotes enviados 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00101
+O servidor UDP enviou 201 e o cliente UDP recebeu 102
+O cliente UDP recebeu 50.75% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
@@ -31,13 +31,13 @@ Transmissão finalizada
 Inicio da execução: programa que calcula métricas UDP lado servidor
 Vinícius Yuji Hara e Eduardo Gabriel Kenzo Tanaka - Diciplina Redes de Computadores 2
 
-Socket associado em 192.168.100.110:8022...
+Socket associado em 192.168.100.110:8033...
 Mandando um dado de 1000000 bytes em memória principal para o cliente UDP
 Mandando 5000 bytes por vez... 
 mandando EOF
-Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00072
-O servidor UDP enviou 201 e o cliente UDP recebeu 91
-O cliente UDP recebeu 45.27% dos pacotes enviados 
+Tempo de envio do servidor UDP de 1000000 bytes em memoria principal: 0.00109
+O servidor UDP enviou 201 e o cliente UDP recebeu 118
+O cliente UDP recebeu 58.71% dos pacotes enviados 
 Transmissão finalizada
 =============================================================================
 
