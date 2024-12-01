@@ -33,6 +33,16 @@
       <br />
       <br />
 
+      <h2><strong>Descrição</strong></h2>
+      <p>Este trabalho tem como objetivo comparar o desempenho dos protocolos TCP e UDP.</p>
+      <p>Para isso, foram consideradas as metricas de tempo de recebimento e perda de dados na 
+        transferencia de arquivos e transferencia em memória principal entre servidor e 
+        cliente.</p>
+      <p>Os programas de teste foram implementados em python utilizando as bibliotecas: </p>
+      <p> **socket** para comunicação entre as máquinas;  </p>
+      <p> **time** para contagem de tempo; </p>
+      <p> **sys** para manipular entrada e saida padrão; </p>
+
       <h2>Código Fonte</h2>
       <span>TCP: </span>
       <a href="./client/client_tcp.py.txt">cliente</a>
@@ -44,6 +54,22 @@
       <br />
       <br />
 
+      <h2>Executando o trabalho</h2>
+      <p>Para executar o trabalho com conexão TCP são utilzados os arquivos cliente_tcp.py 
+        e server_tcp.py. Para a conexão UDP são utilizados os arquivos cliente_udp.py e 
+        server_udp.py.</p>
+      <p>O server pode ser executado com o seguinte comando:</p>
+      <p><b>python3 server_udp.py 'host' 'port'</b></p>
+      <p>Em que 'host' é o nome da máquina do server e 'port' a porta para a comunicação</p>
+      <p>E o cliente pode ser executado com o seguinte comando:</p>
+      <p><b>python3 cliente_udp.py 'metrica' 'tam_pacote' 'nome_arquivo' 'num_bytes' 'host' 'port'</b></p>
+      <p>Em que:</p>
+      <p> 'métrica' pode ser "arquivo" para transferência de arquivo ou "memoria" para transferir em memória principal.</p>
+      <p>'tam_pacote' é o tamanho em bytes que o server vai mandar em cada pacote.</p>
+      <p>'nome_arquivo' é o arquivo que o cliente deseja obter do server e escrever em seu diretório</p>
+      <p>'num_bytes' é o tamanho de bytes a ser transferido em memória, para arquivos usa-se 0.</p>
+      <p>'host' é o nome da máquina do server</p>
+      <p></p>
       <h2>Logs</h2>
       <span>Diretorios dos arquivos de log: </span>
       <br />
